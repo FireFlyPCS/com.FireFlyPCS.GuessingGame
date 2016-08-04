@@ -51,7 +51,7 @@ public class GuessingGame {
 
 		// Main sequence start
 		PlaySound(nGame);
-		JOptionPane.showMessageDialog(null, "Get ready to play my guessing game!");
+		JOptionPane.showMessageDialog(null, "Get ready to play a guessing game!");
 
 		while (keepPlaying) {
 			boolean validInput = true;
