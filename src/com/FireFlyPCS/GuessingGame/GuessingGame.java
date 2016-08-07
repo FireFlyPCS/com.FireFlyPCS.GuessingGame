@@ -24,7 +24,7 @@ public class GuessingGame {
 
 			clip.start();
 
-			Thread.sleep(clip.getMicrosecondLength() /1100);
+			Thread.sleep(clip.getMicrosecondLength() / 1100);
 			// Delays frame until sound finishes
 
 		} catch (Exception e)
@@ -79,7 +79,10 @@ public class GuessingGame {
 						} catch (NumberFormatException e) 
 						{
 							JOptionPane.showMessageDialog(null, "Nice try Alex!");
-						}
+					} catch (NullPointerException ee) {
+						System.exit(tries);
+
+					}
 						
 						validInput = true;
 						if ((guess < 1) || (guess > 10)) {
@@ -114,10 +117,12 @@ public class GuessingGame {
 
 			// play again?
 
+			
 			do {
-
+				
+				try {
 				answer = JOptionPane.showInputDialog("Would you like to try again? (Y or N)");
-
+				
 				validInput = true;
 				if (answer.equalsIgnoreCase("Y"))
 					;
@@ -126,7 +131,18 @@ public class GuessingGame {
 					keepPlaying = false;
 				else
 					validInput = false;
+				} catch (NullPointerException ee)
+					{
+						System.exit(tries);
+						
+					}
+				
+				
 			} while (!validInput);
+			
+			{
+				
+			}
 
 		}
 
