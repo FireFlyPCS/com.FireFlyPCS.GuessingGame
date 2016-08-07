@@ -140,9 +140,6 @@ public class GuessingGame {
 				
 			} while (!validInput);
 			
-			{
-				
-			}
 
 		}
 
